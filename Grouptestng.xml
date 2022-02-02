@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test"></test>
+<test name ="Run">
+<groups>
+<run>
+<include name="Run"></include>
+</run>
+</groups>
+
+    <classes>
+      <class name="TestNG.GroupsOfGroups"/>
+<methods>
+<include name="testcase1"></include>
+</methods>
+
+    </classes>
+
+  </test> <!-- Test -->
+<test name ="Smoke">
+<groups>
+<run>
+<include name ="Smoke"></include>
+</run>
+</groups>
+<classes>
+<class name="TestNG.GroupsOfGroups"/>
+<methods>
+<include name="testcase2"></include>
+
+</methods>
+</classes>
+</test> <!--Test-->
+<test name ="Sanity">
+<groups>
+<run>
+<include name ="Sanity"></include>
+</run>
+</groups>
+<classes>
+<class name="TestNG.GroupsOfGroups"/>
+<methods>
+<include name="testcase3"></include>
+</methods>
+</classes>
+</test> <!--Test-->
+</suite> <!-- Suite -->
